@@ -1,4 +1,4 @@
-# student_check
+# Student Check Frontend part
 
 A new Flutter project.
 .env wasn't uploaded. Please, add your .env file to project root.
