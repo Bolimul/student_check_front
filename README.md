@@ -1,7 +1,7 @@
 # student_check
 
 A new Flutter project.
-
+.env wasn't uploaded. Please, add your .env file to project root.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
