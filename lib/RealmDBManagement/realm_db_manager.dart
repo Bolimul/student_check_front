@@ -124,7 +124,7 @@ class RealmDbManager {
     try {
       Student? s =  _realm.find<Student>(res['id']);
       if(s != null){
-        var sl = res['params'][0];
+        var sl = res['params'];
         List<int> p = List<int>.from(sl);
         SessionItem sessionItem = SessionItem(ObjectId(),res['date'], params: p);
         await  _realm.writeAsync(() {

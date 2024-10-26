@@ -91,8 +91,8 @@ class _ChooseStudentForm extends State<ChooseStudentForm>{
                       onPressed:()async {
                         await controller.setTimeUI(context);
                         if(context.mounted){
-                          context.read<UserProvider>().setListOfSpots();
                           context.read<UserProvider>().setStartAndEndDate();
+                          context.read<UserProvider>().setListOfSpots();
                         }
                       },
                       child: const Text("תבחר.י את התווך התאריכים")
