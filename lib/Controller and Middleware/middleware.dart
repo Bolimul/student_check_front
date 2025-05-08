@@ -64,12 +64,12 @@ class Middleware {
       bool res = await _socketManager.getPersonalDataSocket(st, type);
       if(res == true){
         List<String>? stList = type == 'update'?_realmDbManager.dataToUpdate[st]: List.generate(_realmDbManager.dataToGet[st]!, (index) => index.toString());
-        await Future.forEach<String>(stList!, (session)async {
-          bool res = await _socketManager.getPersonalSessionSocket(st, session, type);
-          if(res == false){
-            resFinal = false;
-          }
-        });
+            await Future.forEach<String>(stList!, (session)async {
+            bool res = await _socketManager.getPersonalSessionSocket(st, session, type);
+            if(res == false){
+              resFinal = false;
+            }
+          });
       }
       else{
         resFinal == false;

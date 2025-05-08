@@ -103,7 +103,7 @@ class ChartForCategoriesInRange extends StatelessWidget{
                     controller.setIsPlaced(false);
                     return SideTitleWidget(
                       angle: -45,
-                      axisSide: meta.axisSide,
+                      meta: TitleMeta(min: meta.min, max: meta.max, parentAxisSize: meta.parentAxisSize, axisPosition: meta.axisPosition, appliedInterval: meta.appliedInterval, sideTitles: meta.sideTitles, formattedValue: meta.formattedValue, axisSide: meta.axisSide, rotationQuarterTurns: meta.rotationQuarterTurns),
                       fitInside: SideTitleFitInsideData(enabled: true, axisPosition: meta.axisPosition, parentAxisSize: meta.parentAxisSize, distanceFromEdge: 0),
                       child: text
                     );

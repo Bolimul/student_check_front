@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+//import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:student_check/Controller%20and%20Middleware/controller.dart';
 import 'package:student_check/UI/Buttons/show_legend_button.dart';
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           final wifiName = wifi.toString().replaceAll('"', '');
           if(Platform.isAndroid){
             if(((statuses[Permission.location]!.isGranted == true) || (await Permission.location.isGranted == true && await Permission.storage.isGranted == true))){
-              if (result.contains(ConnectivityResult.wifi) &&  wifiName == 'Vitalii' && (bssid == dotenv.env['BSSID1'] || bssid == dotenv.env['BSSID2'])){
+              if (result.contains(ConnectivityResult.wifi) &&  wifiName == 'Ashdod1'){
                 controller.socketListenersSetupUI();
                 await controller.connectSocketUI();
                 if(mounted){
@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
             }
           }
           else if(Platform.isWindows){
-            if (result.contains(ConnectivityResult.wifi) &&  wifiName == 'Vitalii' && bssid == dotenv.env['BSSID1']){
+            if (result.contains(ConnectivityResult.wifi) &&  wifiName == 'Ashdod1'){
               controller.socketListenersSetupUI();
               await controller.connectSocketUI();
               if(mounted){

@@ -143,7 +143,7 @@ class RealmDbManager {
   FutureOr<int> getStudentsDB(dynamic data)async{
     var res = fromEJson(data[0]);
     try{
-      var id = res['id']['_id'];
+      var id = res['id'];
       _dataToGet[id] = 0;
     }
     catch(e){
